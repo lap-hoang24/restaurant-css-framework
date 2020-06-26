@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&family=Playfair+Display:wght@400;500;600;700;800;900&family=Teko:wght@600;700&display=swap');
+
+
+// --------TYPOGRAPHY-----------
+
+.navbar {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+
+main .event .event-text,
+main .news .news-text {
+    font-family: 'Playfair Display', serif;
+}
+
+main .event,
+main .news {
+    font-family: 'Teko', sans-serif;
+}
+
+
+
+
+// --------------HEADER-----------
+nav {
+    height: 8vh;
+}
+
+header .container {
+    padding: 0;
+
+    .navbar {
+        background-color: rgba(63, 63, 63, 0.212);
+        color: white;
+    }
+
+}
+
+.jumbotron {
+    height: 92vh;
+    width: 100%;
+    background-image: url("/assets/images/hong-anh-duong.jpg");
+    background-size: cover no-repeat;
+    position: relative;
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .fas {
+        color: white;
+    }
+}
+
+.jumbotron .slogan {
+    background-color: rgba(63, 63, 63, 0.212);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        font-size: 4rem;
+        color: black;
+    }
+    h1 {
+        padding: 1rem;
+        font-size: 4em;
+        text-shadow: 1px 1px 1px darkgrey;
+        color: white;
+        border: 0.7rem white dashed;
+        display: inline-block;
+    }
+}
+
+// ------------MAIN PAGE---------------
+
+main {
+    .container {
+        .row {
+            height: 60vh;
+        }
+
+        .event {
+            &-img-bg {
+                color: white;
+                background-image: url("/assets/images/valentin-b-kremer.jpg");
+                background-size: cover;
+                position: relative;
+
+                .event-banner {
+                    font-size: 3em;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .event-banner:hover {
+                    background-color: rgba(250, 250, 250, 0.35);
+                }
+            }
+        }
+
+        .news {
+            &-img-bg {
+                color: white;
+                background-image: url("/assets/images/adrien-olichon.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+            .news-banner {
+                font-size: 3em;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .news-banner:hover {
+                background-color: rgba(250, 250, 250, 0.35);
+            }
+        }
+    }
+}
+
+// ----------FOOOTERR----------------
+
+footer {
+    .container {
+        .socials {
+            display: flex;
+            align-items: baseline;
+            .love-message {
+                font-family: 'Oranienbaum', serif;
+                display: flex;
+                align-items: baseline;
+            }
+        }
+    }
+}

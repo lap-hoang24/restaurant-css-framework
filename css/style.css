@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&family=Playfair+Display:wght@400;500;600;700;800;900&family=Teko:wght@600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+main .event .event-text,
+main .news .news-text {
+  font-family: 'Playfair Display', serif;
+}
+
+main .event,
+main .news {
+  font-family: 'Teko', sans-serif;
+}
+
+nav {
+  height: 8vh;
+}
+
+header .container {
+  padding: 0;
+}
+
+header .container .navbar {
+  background-color: rgba(63, 63, 63, 0.212);
+  color: white;
+}
+
+.jumbotron {
+  height: 92vh;
+  width: 100%;
+  background-image: url("/assets/images/hong-anh-duong.jpg");
+  background-size: cover no-repeat;
+  position: relative;
+  font-family: 'Teko', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.jumbotron .fas {
+  color: white;
+}
+
+.jumbotron .slogan {
+  background-color: rgba(63, 63, 63, 0.212);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jumbotron .slogan h3 {
+  font-size: 4rem;
+  color: black;
+}
+
+.jumbotron .slogan h1 {
+  padding: 1rem;
+  font-size: 4em;
+  text-shadow: 1px 1px 1px darkgrey;
+  color: white;
+  border: 0.7rem white dashed;
+  display: inline-block;
+}
+
+main .container .row {
+  height: 60vh;
+}
+
+main .container .event-img-bg {
+  color: white;
+  background-image: url("/assets/images/valentin-b-kremer.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+main .container .event-img-bg .event-banner {
+  font-size: 3em;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .event-img-bg .event-banner:hover {
+  background-color: rgba(250, 250, 250, 0.35);
+}
+
+main .container .news-img-bg {
+  color: white;
+  background-image: url("/assets/images/adrien-olichon.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .container .news .news-banner {
+  font-size: 3em;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .news .news-banner:hover {
+  background-color: rgba(250, 250, 250, 0.35);
+}
+
+footer .container .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+footer .container .socials .love-message {
+  font-family: 'Oranienbaum', serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+/*# sourceMappingURL=style.css.map */
