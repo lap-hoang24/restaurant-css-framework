@@ -4,17 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VietSoul - Contact</title>
+    <title>VietSoul - Gallery</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/contact-style.css">
+    <link rel="stylesheet" href="assets/css/gallery1-style.css">
     <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
-    <link rel="icon" 
-    type="image/png" 
-    href="/ramen.png">
+    <link rel="icon" type="image/png" href="/ramen.png">
 </head>
 
 <body>
     <!------------HEADER------------->
+
     <header class="">
         <div class="container">
             <nav class="nav-bar">
@@ -26,57 +25,64 @@
                         <div class="row justify-content-around">
                             <div class="col-auto"><a href="index.html">Home</a></div>
                             <div class="col-auto"><a href="menu.html">Menu</a></div>
-                            <div class="col-auto"><a href="gallery1.html">Gallery</a></div>
+                            <div class="col-auto active-wrapper"><a href="gallery1.html">Gallery</a></div>
                             <div class="col-auto"><a href="restaurant.html">Restaurant</a></div>
-                            <div class="col-auto active-wrapper"><a href="contact.html">Contact</a></div>
+                            <div class="col-auto"><a href="contact.html">Contact</a></div>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
+
     </header>
-    <!-----------MAIN PAGE------------>
+
+    <!------------MAIN PAGE------------->
     <main>
         <div class="container">
-            <div class="row my-5 border-top">
-                <div class="col-12 col-lg-5 mx-auto my-3">
-                    <h2 class="text-center">Contact Soul!</h2>
-                    <form>
-                        <div class="form-row">
-                            <div class="col-12 my-2">
-                                Soul'd like to know your name:
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="First name">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name">
-                            </div>
+            <div class="row h1 my-4 pt-2 pb-lg-3 mt-lg-4">
+                <div class="col-12 col-lg-1 offset-lg-1 py-2 pt-lg-5 text-center">
+                    <h2>Gallery</h2>
+                </div>
+                <div class="col-12 col-lg-9 px-lg-5 offset-lg-1">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 my-2 my-lg-3">
+                            <img src="assets/images/markus-winkler.jpg" alt="Pho Noodles - Northern Beef Noodles">
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1" class="my-2">And your email Soul can contact:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com">
+                        <div class="col-12 col-lg-6 my-2 my-lg-3">
+                            <img src="assets/images/tim-mossholder.jpg" alt="EAT Neon sign">
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Any specific request:</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Please, select here!</option>
-                                <option>Book a table</option>
-                                <option>Give feedback</option>
-                                <option>File a complaint</option>
-                                <option>Other</option>
-                            </select>
+                        <div class="col-12 col-lg-6 my-2 my-lg-3">
+                            <img src="assets/images/mihai-moisa.jpg" alt="VietSoul Restaurant Exteriors">
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Enter details of your request:</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <div class="col-12 col-lg-6 my-2 my-lg-3">
+                            <img src="assets/images/fran-hogan-xOKdnWddziw-unsplash (1).jpg"
+                                alt="Deep-fried Springrolls">
                         </div>
-                        <button class="btn btn-primary d-block mx-auto" type="submit"><i class="fas fa-paper-plane"></i>  Send to Soul</button>
-                    </form>
+                    </div>
+                </div>
+                <!--------PAGINATION-------->
+                <div class="col-12 pgt">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link rounded-circle" href="gallery2.html" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link rounded-circle" href="gallery1.html">1</a></li>
+                            <li class="page-item"><a class="page-link rounded-circle" href="gallery2.html">2</a></li>
+                            <li class="page-item active"><a class="page-link rounded-circle" href="gallery3.html">3</a></li>
+                            <li class="page-item disabled">
+                                <a class="page-link rounded-circle" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
+
     </main>
 
     <!-------------FOOTER-------------->

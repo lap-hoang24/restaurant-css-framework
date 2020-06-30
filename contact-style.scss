@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&family=Playfair+Display:wght@400;500;600;700;800;900&family=Teko:wght@600;700&display=swap");
+
+// --------VARIABLES DECLARATIONS-------
+
+$font-playfaire: "Playfair Display", serif;
+$font-teko: "Teko", sans-serif;
+$font-quicksand: "Quicksand", sans-serif;
+$font-oranien: "Oranienbaum", serif;
+
+
+$clr-black: black;
+$clr-white: white;
+$clr-bg: rgba(63, 63, 63, 0.212);
+
+
+// ----------TYPOGRAPHY-----------
+
+.nav-bar {
+    font-family: $font-playfaire;
+    letter-spacing: 2px;
+}
+
+main .container {
+    font-family: $font-quicksand;
+    font-size: 1rem;
+}
+
+footer .love-message {
+    font-family: $font-oranien;
+}
+
+// -----------HEADER------------------
+
+header .container {
+    padding: 0;
+
+    .navbar {
+        background-color: rgba(63, 63, 63, 0.212);
+        color: $clr-white;
+    }
+}
+
+
+.nav-bar {
+    height: 7vh;
+    background-color: $clr-black;
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &-flex {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+        color: $clr-white;
+    }
+
+    a {
+        text-decoration: none;
+        color: $clr-white;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        z-index: 99;
+        font-size: 0.6rem;
+
+
+        .row {
+            margin: 0;
+            .col-auto {
+                padding: 0;
+            }
+        }
+    }
+
+    .nav-links a {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        color: $clr-black;
+    }
+
+    .nav-links a::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        transform: scale(0);
+        background-color: $clr-black;
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+    }
+
+    .nav-links a:hover::before {
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    // For active links
+    .nav-links .active-wrapper a::before {
+        transform: scale(1);
+    }
+}
+
+// ----------MAIN PAGE---------------
+
+main .container {
+
+    .form-group .form-control {
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+}
+
+// ----------FOOOTERR----------------
+
+footer {
+    .container {
+        .socials {
+            display: flex;
+            align-items: baseline;
+            .love-message {
+                display: flex;
+                align-items: baseline;
+            }
+        }
+    }
+}
+
+// ----MEDIA QUERIES FOR DESKTOP----
+
+@media screen and (min-width: 992px) {
+    // -----HEADER---
+
+    .nav-bar {
+        .nav-links a {
+            font-size: 0.8rem;
+        }
+    }
+}

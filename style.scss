@@ -4,64 +4,158 @@
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&family=Playfair+Display:wght@400;500;600;700;800;900&family=Teko:wght@600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&family=Playfair+Display:wght@400;500;600;700;800;900&family=Teko:wght@600;700&display=swap");
+
+// --------VARIABLES DECLARATIONS-------
+
+$font-playfaire: "Playfair Display", serif;
+$font-teko: "Teko", sans-serif;
+$font-quicksand: "Quicksand", sans-serif;
+$font-oranien: "Oranienbaum", serif;
 
 
-// --------TYPOGRAPHY-----------
+$clr-black: black;
+$clr-white: white;
+$clr-bg: rgba(63, 63, 63, 0.212);
 
-.navbar {
-    font-family: 'Playfair Display', serif;
+// ------------TYPOGRAPHY-------------
+
+.nav-bar {
+    font-family: $font-playfaire;
     letter-spacing: 2px;
 }
 
-
-main .event .event-text,
-main .news .news-text {
-    font-family: 'Playfair Display', serif;
+.jumbotron {
+    font-family: $font-teko;
 }
 
 main .event,
 main .news {
-    font-family: 'Teko', sans-serif;
+    font-family: $font-playfaire;
 }
 
+main .event,
+main .news {
 
+    font-family: $font-teko;
 
+    h4 {
+        line-height: 35px;
+        font-family: $font-playfaire;
+    }
+
+    p {
+        letter-spacing: 1.5px;
+        font-family: $font-quicksand;
+    }
+}
+
+footer .love-message {
+    font-family: $font-oranien;
+}
 
 // --------------HEADER-----------
-nav {
-    height: 8vh;
-}
 
 header .container {
     padding: 0;
 
     .navbar {
-        background-color: rgba(63, 63, 63, 0.212);
-        color: white;
+        background-color: $clr-bg;
+        color: $clr-white;
+    }
+}
+
+.nav-bar {
+    height: 7vh;
+    background-color: $clr-black;
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
+    &-flex {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $clr-white;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        z-index: 99;
+        font-size: 0.6rem;
+        // padding: 0;
+
+        .row {
+            margin: 0;
+            .col-auto {
+                padding: 0;
+            }
+        }
+    }
+
+    .nav-links a {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links a::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        transform: scale(0);
+        background-color: $clr-white;
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+    }
+
+    .nav-links a:hover::before {
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+    }
+    // For active links
+    .nav-links .active-wrapper a::before{
+       transform: scale(1);
+    }
+    
 }
+
 
 .jumbotron {
     height: 92vh;
     width: 100%;
-    background-image: url("/assets/images/hong-anh-duong.jpg");
+    background-image: url("../images/hong-anh-duong.jpg");
     background-size: cover no-repeat;
     position: relative;
-    font-family: 'Teko', sans-serif;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
     .fas {
-        color: white;
+        color: $clr-white;
     }
-    
 }
 
 .jumbotron .slogan {
-    background-color: rgba(63, 63, 63, 0.212);
+    background-color: $clr-bg;
     position: absolute;
     top: 0;
     left: 0;
@@ -75,33 +169,29 @@ header .container {
     align-items: center;
 
     h3 {
-        font-size: 4rem;
-        color: black;
+        font-size: 3.5rem;
+        color: $clr-black;
+        text-shadow: 2px 2px $clr-white;
     }
     h1 {
-        padding: 1rem;
-        font-size: 4em;
+        font-size: 3.5em;
         text-shadow: 1px 1px 1px darkgrey;
-        color: white;
-        border: 0.7rem white dashed;
+        color: $clr-white;
         display: inline-block;
+        text-shadow: 2px 2px $clr-black;
     }
 }
 
 // ------------MAIN PAGE---------------
 
 main {
-    .container {
-        .row {
-            height: 60vh;
-        }
-
         .event {
             &-img-bg {
-                color: white;
-                background-image: url("/assets/images/valentin-b-kremer.jpg");
+                color: $clr-white;
+                background-image: url("../images/valentin-b-kremer.jpg");
                 background-size: cover;
                 position: relative;
+                height: 40vh;
 
                 .event-banner {
                     font-size: 3em;
@@ -122,10 +212,11 @@ main {
 
         .news {
             &-img-bg {
-                color: white;
-                background-image: url("/assets/images/adrien-olichon.jpg");
+                color: $clr-white;
+                background-image: url("../images/adrien-olichon.jpg");
                 background-size: cover;
                 background-position: center;
+                height: 40vh;
             }
             .news-banner {
                 font-size: 3em;
@@ -143,7 +234,6 @@ main {
             }
         }
     }
-}
 
 // ----------FOOOTERR----------------
 
@@ -153,10 +243,45 @@ footer {
             display: flex;
             align-items: baseline;
             .love-message {
-                font-family: 'Oranienbaum', serif;
                 display: flex;
                 align-items: baseline;
             }
         }
     }
 }
+
+
+//-------MEDIA QUERIES FOR DESKTOP------
+
+@media screen and (min-width: 992px) {
+    
+    // -----HEADER---
+
+    .nav-bar {
+        .nav-links a {
+            font-size: 0.8rem;
+        }
+
+    }
+
+    .jumbotron .slogan {
+        h1, h3 {
+            font-size: 4.5rem;
+        }
+    }
+
+    main .container .event {
+
+        &-img-bg {
+            height: 50vh;
+        }
+    }
+
+    main .container .news {
+        flex-direction: row-reverse;
+        &-img-bg {
+            height: 50vh;
+        }
+    }
+}
+
