@@ -40,7 +40,9 @@ main .news {
 
     font-family: $font-teko;
 
-    h3 {
+    .event-head,
+    .news-head {
+        font-size: 1.8rem;
         line-height: 35px;
         font-family: $font-playfaire;
     }
