@@ -26,8 +26,8 @@ main .news {
   font-family: "Teko", sans-serif;
 }
 
-main .event h4,
-main .news h4 {
+main .event h3,
+main .news h3 {
   line-height: 35px;
   font-family: "Playfair Display", serif;
 }
